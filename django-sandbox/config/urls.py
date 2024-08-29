@@ -26,3 +26,5 @@ urlpatterns = [
     path('say-hello/<str:first_name>/', say_hello),
     path('add_nums/<int:number_1>/<int:number_2>/', add_nums)
 ]
+
+
