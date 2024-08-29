@@ -16,10 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from my_app.views import index, about
+
+from my_app.views import index, about, say_hello, add_nums
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
-    path('about', about),
+    path('about/', about),
+    path('say-hello/<str:first_name>/', say_hello),
+    path('add_nums/<int:number_1>/<int:number_2>/', add_nums)
 ]
